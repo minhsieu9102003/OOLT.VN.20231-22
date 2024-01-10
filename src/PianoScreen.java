@@ -45,7 +45,12 @@ public class PianoScreen extends JFrame {
 					PianoController controller = new PianoController(jFrame);
 					loader.setController(controller);
 					Parent root = loader.load();
-					fxPanel.setScene(new Scene(root)); 
+					
+					Scene scene = new Scene(root);
+					fxPanel.setScene(scene); 
+					
+					controller.sendParameterScene(scene);
+					
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

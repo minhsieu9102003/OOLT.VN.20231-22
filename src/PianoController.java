@@ -3,16 +3,28 @@ import javax.swing.JOptionPane;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 public class PianoController {
 	 private SoundManager sm = new SoundManager();
 	 private JFrame parentFrame;
+	 private Scene scene;
+	 
 	 @FXML
 	 private Label volumeLabel,octaveLabel;
 	 
+	 @FXML
+	 private Button btnA, btnS, btnD, btnF, btnG,
+	 	btnH, btnJ, btnW, btnE, btnT, btnY, btnU;
+	 
+	 public Button[] all_button;
+	 
+	 private String all_keys = "AWSEDFTGYHUJ", black_keys = "WETYU";
+	 private boolean[] key_on = new boolean[12];
 	
 	public PianoController(JFrame parentFrame) {
 		super();
@@ -20,147 +32,85 @@ public class PianoController {
 	}
 	
 	@FXML
-	void btnAPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(0);
+	public void initialize(){ 
+		all_button = new Button[12];
+		all_button[0] = btnA;
+		all_button[1] = btnW;
+		all_button[2] = btnS;
+		all_button[3] = btnE;
+		all_button[4] = btnD;
+		all_button[5] = btnF;
+		all_button[6] = btnT;
+		all_button[7] = btnG;
+		all_button[8] = btnY;
+		all_button[9] = btnH;
+		all_button[10] = btnU;
+		all_button[11] = btnJ;
+		for (Button b : all_button) {
+			b.setOnMousePressed(e -> handleButtonPressed(e));
+			b.setOnMouseReleased(e -> handleButtonReleased(e));
+		}
 	}
 	
-	@FXML
-	void btnAReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(0);
+	void sendParameterScene(Scene s) {
+		scene = s;
+		scene.setOnKeyPressed(e -> handleKeyPressed(e));
+		scene.setOnKeyReleased(e -> handleKeyReleased(e));
 	}
 	
-	@FXML
-	void btnSPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(2);
+	private void handleButtonPressed(MouseEvent e) {
+		Button tmp = ((Button) e.getSource());
+		int index = all_keys.indexOf(tmp.getText().charAt(0));
+		if (key_on[index] == false) {
+			key_on[index] = true;
+			sm.noteOn(index);
+			tmp.setStyle("-fx-background-color: Green; -fx-border-color: Black");
+		}
 	}
 	
-	@FXML
-	void btnSReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(2);
+	private void handleButtonReleased(MouseEvent e) {
+		Button tmp = ((Button) e.getSource());
+		int index = all_keys.indexOf(tmp.getText().charAt(0));
+		if (key_on[index] == true) {
+			key_on[index] = false;
+			sm.noteOff(index);
+			if (black_keys.indexOf(tmp.getText().charAt(0)) == -1)
+				tmp.setStyle("-fx-background-color: White; -fx-border-color: Black");
+			else 
+				tmp.setStyle("-fx-background-color: Black; -fx-border-color: Black");
+		}
 	}
 	
-	@FXML
-	void btnDPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(4);
+	private void handleKeyPressed(KeyEvent e) {
+		String tmp_str = e.getCode().toString();
+		if (tmp_str.length() == 1) {
+			char tmp_chr = tmp_str.charAt(0);
+			int index = all_keys.indexOf(tmp_chr);
+			if (index != -1) 
+				if (key_on[index] == false) {
+					key_on[index] = true;
+					sm.noteOn(index);
+					all_button[index].setStyle("-fx-background-color: Green; -fx-border-color: Black");
+				}
+		}
 	}
 	
-	@FXML
-	void btnDReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(4);
-	}
-	
-	@FXML
-	void btnFPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(5);
-	}
-	
-	@FXML
-	void btnFReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(5);
-	}
-	
-	@FXML
-	void btnGPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(7);
-	}
-	
-	@FXML
-	void btnGReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(7);
-	}
-	
-	@FXML
-	void btnHPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(9);
-	}
-	
-	@FXML
-	void btnHReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(9);
-	}
-	
-	@FXML
-	void btnJPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green; -fx-border-color: Black");
-		sm.noteOn(11);
-	}
-	
-	@FXML
-	void btnJReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: White; -fx-border-color: Black");
-		sm.noteOff(11);
-	}
-	
-	@FXML
-	void btnWPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green");
-		sm.noteOn(1);
-	}
-	
-	@FXML
-	void btnWReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Black");
-		sm.noteOff(1);
-	}
-	
-	@FXML
-	void btnEPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green");
-		sm.noteOn(3);
-	}
-	
-	@FXML
-	void btnEReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Black");
-		sm.noteOff(3);
-	}
-	
-	@FXML
-	void btnTPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green");
-		sm.noteOn(6);
-	}
-	
-	@FXML
-	void btnTReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Black");
-		sm.noteOff(6);
-	}
-	
-	@FXML
-	void btnYPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green");
-		sm.noteOn(8);
-	}
-	
-	@FXML
-	void btnYReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Black");
-		sm.noteOff(8);
-	}
-	
-	@FXML
-	void btnUPressed(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Green");
-		sm.noteOn(10);
-	}
-	
-	@FXML
-	void btnUReleased(MouseEvent e) {
-		((Button) e.getSource()).setStyle("-fx-background-color: Black");
-		sm.noteOff(10);
+	private void handleKeyReleased(KeyEvent e) {
+		String tmp_str = e.getCode().toString();
+		if (tmp_str.length() == 1) {
+			char tmp_chr = tmp_str.charAt(0);
+			int index = all_keys.indexOf(tmp_chr);
+			if (index != -1) {
+				if (key_on[index] == true) {
+					key_on[index] = false;
+					sm.noteOff(index);
+					if (black_keys.indexOf(tmp_chr) == -1)
+						all_button[index].setStyle("-fx-background-color: White; -fx-border-color: Black");
+					else 
+						all_button[index].setStyle("-fx-background-color: Black; -fx-border-color: Black");
+				}
+			}
+		}
 	}
 	
 	@FXML
