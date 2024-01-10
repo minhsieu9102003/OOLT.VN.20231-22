@@ -20,18 +20,18 @@
                   <AnchorPane prefHeight="100.0" prefWidth="222.0">
                      <children>
                         <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="C" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="96.0" mnemonicParsing="false" onMousePressed="#btnFPressed" onMouseReleased="#btnFReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="F" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="32.0" mnemonicParsing="false" onMousePressed="#btnSPressed" onMouseReleased="#btnSReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="S" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="64.0" mnemonicParsing="false" onMousePressed="#btnDPressed" onMouseReleased="#btnDReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="D" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="52.0" mnemonicParsing="false" onMousePressed="#btnEPressed" onMouseReleased="#btnEReleased" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="E" textFill="WHITE" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="128.0" mnemonicParsing="false" onMousePressed="#btnGPressed" onMouseReleased="#btnGReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="G" />
-                        <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onMousePressed="#btnAPressed" onMouseReleased="#btnAReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="A" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="160.0" mnemonicParsing="false" onMousePressed="#btnHPressed" onMouseReleased="#btnHReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="H" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="192.0" mnemonicParsing="false" onMousePressed="#btnJPressed" onMouseReleased="#btnJReleased" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="J" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="116.0" mnemonicParsing="false" onMousePressed="#btnTPressed" onMouseReleased="#btnTReleased" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="T" textFill="WHITE" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="148.0" mnemonicParsing="false" onMousePressed="#btnYPressed" onMouseReleased="#btnYReleased" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="Y" textFill="WHITE" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="180.0" mnemonicParsing="false" onMousePressed="#btnUPressed" onMouseReleased="#btnUReleased" prefHeight="45.0" prefWidth="25.0" style="-fx-background-color: black;" text="U" textFill="WHITE" />
-                        <Button alignment="BOTTOM_CENTER" layoutX="15.0" mnemonicParsing="false" onMousePressed="#btnWPressed" onMouseReleased="#btnWReleased" prefHeight="45.0" prefWidth="29.0" style="-fx-background-color: black;" text="W" textFill="WHITE" />
+                        <Button fx:id="btnF" alignment="BOTTOM_CENTER" layoutX="96.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="F" />
+                        <Button fx:id="btnS" alignment="BOTTOM_CENTER" layoutX="32.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="S" />
+                        <Button fx:id="btnD" alignment="BOTTOM_CENTER" layoutX="64.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="D" />
+                        <Button fx:id="btnE" alignment="BOTTOM_CENTER" layoutX="52.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="E" textFill="WHITE" />
+                        <Button fx:id="btnG" alignment="BOTTOM_CENTER" layoutX="128.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="G" />
+                        <Button fx:id="btnA" alignment="BOTTOM_CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="A" />
+                        <Button fx:id="btnH" alignment="BOTTOM_CENTER" layoutX="160.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="H" />
+                        <Button fx:id="btnJ" alignment="BOTTOM_CENTER" layoutX="192.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="32.0" style="-fx-background-color: white; -fx-border-color: black;" text="J" />
+                        <Button fx:id="btnT" alignment="BOTTOM_CENTER" layoutX="116.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="T" textFill="WHITE" />
+                        <Button fx:id="btnY" alignment="BOTTOM_CENTER" layoutX="148.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="18.0" style="-fx-background-color: black;" text="Y" textFill="WHITE" />
+                        <Button fx:id="btnU" alignment="BOTTOM_CENTER" layoutX="180.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="25.0" style="-fx-background-color: black;" text="U" textFill="WHITE" />
+                        <Button fx:id="btnW" alignment="BOTTOM_CENTER" layoutX="15.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="29.0" style="-fx-background-color: black;" text="W" textFill="WHITE" />
                      </children>
                   </AnchorPane>
                </children>
