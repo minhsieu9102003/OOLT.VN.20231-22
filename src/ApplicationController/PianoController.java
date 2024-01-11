@@ -1,6 +1,8 @@
+package ApplicationController;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
+import SoundManager.SoundManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
@@ -52,7 +54,7 @@ public class PianoController {
 		}
 	}
 	
-	void sendParameterScene(Scene s) {
+	public void sendParameterScene(Scene s) {
 		scene = s;
 		scene.setOnKeyPressed(e -> handleKeyPressed(e));
 		scene.setOnKeyReleased(e -> handleKeyReleased(e));
