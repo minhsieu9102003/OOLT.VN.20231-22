@@ -128,25 +128,25 @@ public class PianoController {
 	
 	@FXML
 	void volumeUpPressed(ActionEvent e) {
-		sm.increaseVolume(10);
-		volumeLabel.setText(sm.getVolume() + "");
+		sm.volume.increase();
+		volumeLabel.setText(sm.volume.getValue() + "");
 	}
 	
 	@FXML
 	void volumeDownPressed(ActionEvent e) {
-		sm.increaseVolume(-10);
-		volumeLabel.setText(sm.getVolume() + "");
+		sm.volume.decrease();
+		volumeLabel.setText(sm.volume.getValue() + "");
 	}
 	
 	@FXML
 	void octaveUpPressed(ActionEvent e) {
-		sm.increaseOctave(1);
-		octaveLabel.setText(sm.getOctave() + "");
+		sm.octave.increase();;
+		octaveLabel.setText(sm.octave.getValue() + "");
 	}
 	
 	@FXML
 	void octaveDownPressed(ActionEvent e) {
-		sm.increaseOctave(-1);
-		octaveLabel.setText(sm.getOctave() + "");
+		sm.octave.decrease();;
+		octaveLabel.setText(sm.octave.getValue() + "");
 	}
 }
