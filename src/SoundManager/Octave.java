@@ -14,4 +14,8 @@ public class Octave extends Adjustable {
 		if (value > 1)
 			value--;
 	}
+	@Override
+	public void setValue(int value) {
+		this.value=value;
+	}
 }
