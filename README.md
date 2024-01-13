@@ -1,15 +1,15 @@
 # OOLT.VN.20231- 22 
 
-Midterm Mini Project Contribution Report
-Project Title: Piano GUI
-Demo video: [Watch on YouTube](https://www.youtube.com/watch?v=bXXW3usjzew)
+Midterm Mini Project Contribution Report<br/>
+Project Title: Piano GUI<br/>
+Demo video: [Watch on YouTube](https://www.youtube.com/watch?v=bXXW3usjzew)<br/>
 
 ## Team Members:
 
-Tran Binh Minh 20215094 (Team Leader)
-Nguyen Huu Minh 20215091
-Lieu Nhat Minh 20215089
-Phan Do Hai Minh 20184154
+Tran Binh Minh 20215094 (Team Leader)<br/>
+Nguyen Huu Minh 20215091<br/>
+Lieu Nhat Minh 20215089<br/>
+Phan Do Hai Minh 20184154<br/>
 
 ## 1. Introduction
 
