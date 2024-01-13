@@ -26,6 +26,7 @@ public class PianoController {
 	 public Button[] all_button;
 	 
 	 private String all_keys = "AWSEDFTGYHUJ", black_keys = "WETYU";
+	 private String octave_level = "12345678";
 	 private boolean[] key_on = new boolean[12];
 	
 	public PianoController(JFrame parentFrame) {
@@ -94,6 +95,13 @@ public class PianoController {
 					sm.noteOn(index);
 					all_button[index].setStyle("-fx-background-color: Green; -fx-border-color: Black");
 				}
+		}
+		if (tmp_str.length() == 6) {
+			char tmp_chr = tmp_str.charAt(5);
+			if (octave_level.indexOf(tmp_chr) != -1) {
+				sm.octave.setValue(tmp_chr - '0');
+				octaveLabel.setText(sm.octave.getValue() + "");
+			}
 		}
 	}
 	

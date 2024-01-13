@@ -11,6 +11,9 @@ public abstract class Adjustable {
 	public int getValue() {
 		return value;
 	};
+	public void setValue(int value) {
+		
+	}
 	public Adjustable(int x) {
 		value = x;
 	}
