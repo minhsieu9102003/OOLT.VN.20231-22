@@ -40,4 +40,28 @@ Code Contribution: Both Lieu Nhat Minh and Phan Do Hai Minh actively contributed
 The successful completion of our OOP midterm mini project is a testament to the collaborative and balanced nature of our team. Each member played a pivotal role, contributing their unique skills and perspectives. As the team leader, I am proud to highlight not only the individual contributions but also the collective spirit and mutual support that defined our project journey.
 
 
+4. In short
+Tran Binh Minh (Team Leader):
+
+-Developed the SoundManager class, contributing to the project's audio management aspect.
+-Initiated the project idea, designed the use case and general class diagrams.
+-Created the presentation slides for the project.
+
+Nguyen Huu Minh:
+
+-Played a mentoring role in guiding team members in coding.
+-Responsible for converting the original code from Swing to JavaFX, modernizing the project.
+-Designed and developed the GUI, creating FXML files and converting them to JavaFX format.
+-Managed the integration, optimization, and merging of the team's code contributions.
+
+Lieu Nhat Minh:
+
+-Developed the PianoGUI class, contributing to the user interface aspect of the project.
+-Along with Phan Do Hai Minh, created the actual use case and class diagrams based on the initial designs and the developed code, ensuring accurate and detailed representation.
+
+Phan Do Hai Minh:
+
+-Developed the AppController class, contributing to the application's control logic and overall functionality.
+-Along with Lieu Nhat Minh, responsible for drawing the detailed diagrams based on the project's code, contributing to the project's documentation and design accuracy.
+
 
