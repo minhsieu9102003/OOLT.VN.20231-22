@@ -57,7 +57,7 @@ Code Contribution: Both Lieu Nhat Minh and Phan Do Hai Minh actively contributed
 
 ### Phan Do Hai Minh:
 
--  Contributing to AppController class, design help message, contributing to the application's control logic and overall functionality.<br/>
+-  Contributing to AppController class, design help message, octave and volume handle, contributing to the application's control logic and overall functionality.<br/>
 -  Along with Lieu Nhat Minh, responsible for drawing the detailed diagrams based on the project's code, contributing to the project's documentation and design accuracy.
 
 ## 4. Conclusion
