@@ -47,7 +47,7 @@ Code Contribution: Both Lieu Nhat Minh and Phan Do Hai Minh actively contributed
 - Played a mentoring role in guiding team members in coding.<br/>
 - Responsible for converting the original code from Swing to JavaFX, modernizing the project.<br/>
 - Designed and developed the GUI, creating FXML files and converting them to JavaFX format.<br/>
-- Contributing to AppController class<br/>
+- Design AppController class<br/>
 - Managed the integration, optimization, and merging of the team's code contributions.<br/>
 
 ### Lieu Nhat Minh:
@@ -57,7 +57,7 @@ Code Contribution: Both Lieu Nhat Minh and Phan Do Hai Minh actively contributed
 
 ### Phan Do Hai Minh:
 
--  Developed the AppController class, contributing to the application's control logic and overall functionality.<br/>
+-  Contributing to AppController class, design help message, contributing to the application's control logic and overall functionality.<br/>
 -  Along with Lieu Nhat Minh, responsible for drawing the detailed diagrams based on the project's code, contributing to the project's documentation and design accuracy.
 
 ## 4. Conclusion
